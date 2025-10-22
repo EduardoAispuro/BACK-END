@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Funcional - JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Programación Funcional en JavaScript</h1>
+            <p class="subtitle">Demostración de métodos funcionales: filter, find, map, reduce y más</p>
+        </header>
+
+        <main>
+            <!-- Sección de Productos -->
+            <section class="card">
+                <h2>📦 Gestión de Productos</h2>
+                <div class="controls">
+                    <button onclick="mostrarTodosProductos()" class="btn btn-primary">Mostrar Todos</button>
+                    <button onclick="filtrarPorCategoria('electrónica')" class="btn btn-secondary">Electrónica</button>
+                    <button onclick="filtrarPorCategoria('ropa')" class="btn btn-secondary">Ropa</button>
+                    <button onclick="filtrarPorPrecio(500)" class="btn btn-info">Precio < $500</button>
+                    <button onclick="calcularTotal()" class="btn btn-success">Calcular Total</button>
+                </div>
+                <div id="productos-resultado" class="resultado"></div>
+            </section>
+
+            <!-- Sección de Búsqueda -->
+            <section class="card">
+                <h2>🔍 Búsqueda de Productos</h2>
+                <div class="search-container">
+                    <input type="text" id="buscar-input" placeholder="Buscar producto por nombre..." class="input-search">
+                    <button onclick="buscarProducto()" class="btn btn-primary">Buscar</button>
+                </div>
+                <div id="busqueda-resultado" class="resultado"></div>
+            </section>
+
+            <!-- Sección de Usuarios -->
+            <section class="card">
+                <h2>👥 Gestión de Usuarios</h2>
+                <div class="controls">
+                    <button onclick="mostrarUsuarios()" class="btn btn-primary">Mostrar Usuarios</button>
+                    <button onclick="filtrarUsuariosActivos()" class="btn btn-success">Usuarios Activos</button>
+                    <button onclick="obtenerEmails()" class="btn btn-info">Obtener Emails</button>
+                    <button onclick="buscarUsuarioPorId()" class="btn btn-warning">Buscar por ID</button>
+                </div>
+                <div id="usuarios-resultado" class="resultado"></div>
+            </section>
+
+            <!-- Sección de Estadísticas -->
+            <section class="card">
+                <h2>📊 Estadísticas y Análisis</h2>
+                <div class="controls">
+                    <button onclick="calcularEstadisticas()" class="btn btn-primary">Calcular Estadísticas</button>
+                    <button onclick="agruparPorCategoria()" class="btn btn-secondary">Agrupar por Categoría</button>
+                    <button onclick="productoMasCaro()" class="btn btn-info">Producto Más Caro</button>
+                </div>
+                <div id="estadisticas-resultado" class="resultado"></div>
+            </section>
+
+            <!-- Sección de Transformaciones -->
+            <section class="card">
+                <h2>🔄 Transformaciones de Datos</h2>
+                <div class="controls">
+                    <button onclick="aplicarDescuento(10)" class="btn btn-success">Descuento 10%</button>
+                    <button onclick="aplicarDescuento(20)" class="btn btn-success">Descuento 20%</button>
+                    <button onclick="convertirMayusculas()" class="btn btn-info">Nombres en Mayúsculas</button>
+                    <button onclick="productosPremium()" class="btn btn-warning">Productos Premium</button>
+                </div>
+                <div id="transformaciones-resultado" class="resultado"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desarrollado con Programación Funcional en JavaScript</p>
+            <p>CESUN - Desarrollo de Apps Móviles 1</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
